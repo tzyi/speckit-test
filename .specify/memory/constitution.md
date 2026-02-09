@@ -1,38 +1,58 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+
+<!--
+Sync Impact Report
+- Version change: (none) → 1.0.0
+- Modified principles: 全部重寫
+- Added sections: Governance
+- Removed sections: 無
+- Templates requiring updates: plan-template.md ✅, spec-template.md ✅, tasks-template.md ✅
+- Follow-up TODOs: RATIFICATION_DATE 需補充
+-->
+
+# Minimal Static WebApp Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### I. 靜態部署優先
+所有功能必須可於靜態主機（如 GitHub Pages、Netlify）直接部署，嚴禁依賴伺服器端運算。
+**Rationale**: 保證可攜性、易於維護與低運維成本。
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### II. 依賴最小化
+僅允許使用原生 HTML、CSS、JavaScript。除非有明確理由，嚴禁引入第三方框架或套件。
+**Rationale**: 降低複雜度、減少安全風險、提升載入效能。
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### III. 測試可驗證
+所有互動功能必須可用手動或自動化方式驗證（如瀏覽器開發者工具、簡單 JS 測試）。
+**Rationale**: 保證功能正確性，便於日後維護。
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+
+### IV. 文件簡明
+每個功能或頁面必須有簡要說明（可為註解或單一 markdown），描述用途與操作方式。
+**Rationale**: 降低新進人員理解成本。
+
+
+### V. 版本與變更管理
+所有重大變更必須記錄於 changelog 或 commit message，並遵循 MAJOR.MINOR.PATCH 版本規則。
+**Rationale**: 便於追蹤歷史與回溯。
+
+
+## 技術與安全約束
+
+- 僅允許 HTML、CSS、原生 JS，嚴禁 Node.js、PHP、Python 等後端技術。
+- 不得儲存敏感資料於前端（如密碼、金鑰）。
+- 必須考慮跨瀏覽器相容性。
+
+## 開發流程與治理
+
+- 任何原則修訂需經專案成員共識，並於憲章記錄。
+- 憲章版本號須依語意化規則調整。
+- 每次修訂須記錄 LAST_AMENDED_DATE。
+- RATIFICATION_DATE: TODO(請補充原始通過日期)
+- LAST_AMENDED_DATE: 2026-02-10
+- CONSTITUTION_VERSION: 1.0.0
 
 ## [SECTION_3_NAME]
 <!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->

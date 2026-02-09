@@ -3,9 +3,12 @@
 **Feature Branch**: `[###-feature-name]`  
 **Created**: [DATE]  
 **Status**: Draft  
-**Input**: User description: "$ARGUMENTS"
 
-## User Scenarios & Testing *(mandatory)*
+**Input**: User description: "$ARGUMENTS"
+**技術約束**: 僅允許 HTML、CSS、原生 JS，嚴禁多餘依賴與後端技術
+
+
+## User Scenarios & Testing *(mandatory, 必須可手動或原生 JS 驗證)*
 
 <!--
   IMPORTANT: User stories should be PRIORITIZED as user journeys ordered by importance.

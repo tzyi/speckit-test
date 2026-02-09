@@ -44,13 +44,13 @@ description: "Task list template for feature implementation"
   ============================================================================
 -->
 
-## Phase 1: Setup (Shared Infrastructure)
 
-**Purpose**: Project initialization and basic structure
+## Phase 1: Setup (專案初始化)
 
-- [ ] T001 Create project structure per implementation plan
-- [ ] T002 Initialize [language] project with [framework] dependencies
-- [ ] T003 [P] Configure linting and formatting tools
+**Purpose**: 僅建立 HTML/CSS/JS 結構，嚴禁初始化任何框架或多餘依賴
+
+- [ ] T001 建立專案資料夾與 index.html、style.css、main.js
+- [ ] T002 (如有需要) 設定基本說明文件（README.md）
 
 ---
 

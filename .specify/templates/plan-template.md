@@ -17,15 +17,16 @@
   the iteration process.
 -->
 
-**Language/Version**: [e.g., Python 3.11, Swift 5.9, Rust 1.75 or NEEDS CLARIFICATION]  
-**Primary Dependencies**: [e.g., FastAPI, UIKit, LLVM or NEEDS CLARIFICATION]  
-**Storage**: [if applicable, e.g., PostgreSQL, CoreData, files or N/A]  
-**Testing**: [e.g., pytest, XCTest, cargo test or NEEDS CLARIFICATION]  
-**Target Platform**: [e.g., Linux server, iOS 15+, WASM or NEEDS CLARIFICATION]
-**Project Type**: [single/web/mobile - determines source structure]  
-**Performance Goals**: [domain-specific, e.g., 1000 req/s, 10k lines/sec, 60 fps or NEEDS CLARIFICATION]  
-**Constraints**: [domain-specific, e.g., <200ms p95, <100MB memory, offline-capable or NEEDS CLARIFICATION]  
-**Scale/Scope**: [domain-specific, e.g., 10k users, 1M LOC, 50 screens or NEEDS CLARIFICATION]
+
+**Language/Version**: HTML5, CSS3, JavaScript (ES6+)
+**Primary Dependencies**: 僅允許原生語言功能，除非有明確理由，嚴禁引入第三方框架或套件
+**Storage**: 僅允許 localStorage 或 sessionStorage，嚴禁後端儲存
+**Testing**: 手動驗證或簡單 JS 測試（無需外部測試框架）
+**Target Platform**: 所有主流桌面與行動瀏覽器
+**Project Type**: 靜態網頁（無後端）
+**Performance Goals**: 首頁載入 < 1 秒，資源最小化
+**Constraints**: 嚴禁多餘依賴，必須可於靜態主機部署
+**Scale/Scope**: 頁面數量與功能依需求調整
 
 ## Constitution Check
 
