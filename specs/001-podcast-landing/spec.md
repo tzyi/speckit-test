@@ -16,7 +16,7 @@
 - Q: 詳細頁面呈現方式？→ A: 每個精選集數詳細頁為獨立 HTML 檔，落地頁用 JS/HTML 跳轉
 
 
-## User Scenarios & Testing *(mandatory, 必須可手動或原生 JS 驗證)*
+## User Scenarios *(mandatory)*
 
 ### User Story 1 - 首頁展示三個精選集數 (Priority: P1)
 
@@ -24,7 +24,7 @@
 
 **Why this priority**: 這是落地頁的核心價值，直接吸引訪客點擊收聽。
 
-**Independent Test**: 於瀏覽器開啟頁面，確認三個精選集數皆正確顯示。
+
 
 **Acceptance Scenarios**:
 
@@ -39,7 +39,7 @@
 
 **Why this priority**: 提供深入內容，提升用戶黏著度。
 
-**Independent Test**: 點擊精選集數，確認能正確跳轉並顯示詳細內容。
+
 
 **Acceptance Scenarios**:
 
@@ -54,7 +54,7 @@
 
 **Why this priority**: 提升使用體驗，適應多種設備。
 
-**Independent Test**: 調整瀏覽器尺寸，確認排版自動適應。
+
 
 **Acceptance Scenarios**:
 
@@ -107,7 +107,7 @@
 
 **Why this priority**: [Explain the value and why it has this priority level]
 
-**Independent Test**: [Describe how this can be tested independently]
+
 
 **Acceptance Scenarios**:
 
@@ -121,7 +121,7 @@
 
 **Why this priority**: [Explain the value and why it has this priority level]
 
-**Independent Test**: [Describe how this can be tested independently]
+
 
 **Acceptance Scenarios**:
 

@@ -15,7 +15,7 @@
 **Language/Version**: HTML5, CSS3, JavaScript (ES6+)
 **Primary Dependencies**: 僅允許原生 HTML、CSS、JS，不可引入任何第三方框架或套件
 **Storage**: 僅允許 localStorage 或 sessionStorage（如需暫存 UI 狀態），嚴禁後端儲存與 API 呼叫
-**Testing**: 僅允許手動驗證或原生 JS 測試（不可引入外部測試框架）
+<!-- 測試相關已移除 -->
 **Target Platform**: 桌面與行動裝置主流瀏覽器
 **Project Type**: 純靜態網頁（可 GitHub Pages/Netlify 部署）
 **Performance Goals**: 首頁載入 < 1 秒，資源最小化
@@ -26,7 +26,7 @@
 
 **GATE 1: 靜態部署優先** — 通過（僅產生靜態 HTML/CSS/JS，無伺服器端依賴）
 **GATE 2: 依賴最小化** — 通過（嚴禁第三方框架與外部 JS 套件）
-**GATE 3: 測試可驗證** — 通過（手動驗證與原生 JS 測試）
+<!-- GATE 3: 測試相關已移除 -->
 **GATE 4: 文件簡明** — 通過（每頁附簡要說明）
 **GATE 5: 版本與變更管理** — 通過（重大變更記錄於 changelog/commit message）
 
@@ -68,10 +68,7 @@ src/
 ├── cli/
 └── lib/
 
-tests/
-├── contract/
-├── integration/
-└── unit/
+<!-- 測試資料夾已移除 -->
 
 # [REMOVE IF UNUSED] Option 2: Web application (when "frontend" + "backend" detected)
 backend/
@@ -79,21 +76,21 @@ backend/
 │   ├── models/
 │   ├── services/
 │   └── api/
-└── tests/
+<!-- 測試資料夾已移除 -->
 
 frontend/
 ├── src/
 │   ├── components/
 │   ├── pages/
 │   └── services/
-└── tests/
+<!-- 測試資料夾已移除 -->
 
 # [REMOVE IF UNUSED] Option 3: Mobile + API (when "iOS/Android" detected)
 api/
 └── [same as backend above]
 
 ios/ or android/
-└── [platform-specific structure: feature modules, UI flows, platform tests]
+└── [platform-specific structure: feature modules, UI flows]
 ```
 
 
@@ -112,7 +109,7 @@ public/
 scripts/
 └── main.js            # 落地頁 JS
 ```
-無需 models/services/cli/lib 目錄，亦無 tests 目錄（僅手動驗證）。
+無需 models/services/cli/lib 目錄。
 
 ## Complexity Tracking
 

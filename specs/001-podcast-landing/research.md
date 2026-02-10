@@ -20,7 +20,4 @@
 - **Rationale**: 提升 UX，避免空白或壞圖。
 - **Alternatives considered**: 1. 忽略異常（不符需求）；2. 伺服器端處理（違反規範）。
 
-## 5. 測試方式
-- **Decision**: 僅手動驗證與原生 JS 測試（如 console.log/assert）。
-- **Rationale**: 無外部測試框架，維持簡單。
-- **Alternatives considered**: 1. Jest/Mocha（違反規範）；2. 完全無測試（不建議）。
+
