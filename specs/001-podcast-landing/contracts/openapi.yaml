@@ -1,0 +1,37 @@
+openapi: 3.0.0
+info:
+  title: Podcast Landing Page (Static)
+  version: 1.0.0
+  description: |
+    靜態播客落地頁面，僅用於前端資料結構與互動說明，無 API 實作。
+paths:
+  /index.html:
+    get:
+      summary: 播客落地頁
+      description: 顯示三個精選集數
+      responses:
+        '200':
+          description: 成功載入
+          content:
+            text/html:
+              schema:
+                type: string
+  /episode-{id}.html:
+    get:
+      summary: 精選集數詳細頁
+      description: 顯示單一集數完整資訊
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 成功載入
+          content:
+            text/html:
+              schema:
+                type: string
+        '404':
+          description: 詳細頁不存在，導回 index.html 並顯示錯誤
