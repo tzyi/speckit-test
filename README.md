@@ -1,6 +1,8 @@
 # 播客精選集落地頁專案
 
 本專案為純靜態 HTML/CSS/JS 播客 Landing Page，無後端、無第三方框架。
+![](.\public\assets\images\home.png)
+
 
 ## 結構
 - public/index.html：首頁，顯示三集精選
