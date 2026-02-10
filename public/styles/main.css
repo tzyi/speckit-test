@@ -1,66 +1,186 @@
-body {
+
+body.dark {
   font-family: 'Noto Sans TC', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f8f8f8;
-  color: #222;
+  background: #18181c;
+  color: #f3f3f3;
+  min-height: 100vh;
+  display: flex;
 }
-header, footer {
-  text-align: center;
-  padding: 1.5em 0;
-  background: #fff;
+.sidebar {
+  width: 64px;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em 0;
+  min-height: 100vh;
+}
+.logo {
+  font-size: 2em;
+  margin-bottom: 1.5em;
+}
+.nav-btn {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 1.5em;
+  margin: 0.5em 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.nav-btn.active,
+.nav-btn:hover {
+  color: #1db954;
+}
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em 0.5em 2em;
+  background: #23232a;
+}
+.category-bar {
+  display: flex;
+  gap: 1em;
+}
+.cat-btn {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 1em;
+  padding: 0.5em 1.2em;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.cat-btn.active,
+.cat-btn:hover {
+  background: #1db954;
+  color: #fff;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #18181c;
+  border-radius: 20px;
+  padding: 0.2em 0.7em;
+}
+.search-bar input {
+  background: none;
+  border: none;
+  color: #f3f3f3;
+  font-size: 1em;
+  outline: none;
+  padding: 0.5em 0.5em;
+}
+.search-btn {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 1.2em;
+  cursor: pointer;
 }
 main {
-  max-width: 900px;
-  margin: 2em auto;
-  padding: 0 1em;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2em;
 }
 #episodes {
   display: flex;
   flex-wrap: wrap;
   gap: 2em;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .episode-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-  width: 270px;
+  background: linear-gradient(135deg, #a7267b 0%, #1db954 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  width: 320px;
+  min-height: 320px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
+  color: #fff;
+  position: relative;
+}
+.episode-card:nth-child(2) {
+  background: linear-gradient(135deg, #0057b8 0%, #1db954 100%);
+}
+.episode-card:nth-child(3) {
+  background: linear-gradient(135deg, #444 0%, #1db954 100%);
 }
 .episode-card:hover {
-  transform: translateY(-6px) scale(1.03);
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.28);
 }
 .episode-card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  background: #eee;
+  background: #222;
+  border-bottom: 2px solid rgba(255,255,255,0.08);
+  display: block;
 }
-.episode-card h2 {
-  font-size: 1.2em;
+.episode-card img.broken {
+  background: #333 url('data:image/svg+xml;utf8,<svg width="48" height="48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" fill="%23333"/><text x="24" y="28" font-size="18" fill="white" text-anchor="middle">🚫</text></svg>') center/48px no-repeat;
+}
+.episode-card .ep-title {
+  font-size: 1.5em;
+  font-weight: bold;
   margin: 1em 1em 0.5em 1em;
+  letter-spacing: 1px;
 }
-.episode-card p {
+.episode-card .ep-sub {
+  font-size: 1em;
+  margin: 0 1em 0.5em 1em;
+  color: #e0e0e0;
+}
+.episode-card .ep-desc {
   margin: 0 1em 1em 1em;
-  color: #555;
+  color: #f3f3f3;
 }
 .episode-card a {
   display: block;
   margin: 0 1em 1em 1em;
-  color: #0078d4;
-  text-decoration: none;
+  color: #fff;
+  text-decoration: underline;
   font-weight: bold;
+  background: rgba(0,0,0,0.12);
+  border-radius: 8px;
+  padding: 0.5em 0;
+  text-align: center;
+  transition: background 0.2s;
 }
-@media (max-width: 700px) {
+.episode-card a:hover {
+  background: #1db954;
+  color: #fff;
+}
+footer {
+  text-align: center;
+  padding: 1em 0;
+  background: #23232a;
+  color: #aaa;
+}
+@media (max-width: 900px) {
+  main {
+    padding: 1em;
+  }
   #episodes {
-    flex-direction: column;
-    gap: 1.5em;
+    gap: 1em;
   }
   .episode-card {
     width: 100%;
+    min-height: 220px;
   }
 }

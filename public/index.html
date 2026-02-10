@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -6,19 +7,36 @@
   <title>播客精選集 Landing Page</title>
   <link rel="stylesheet" href="styles/main.css">
 </head>
-<body>
-  <header>
-    <h1>播客精選集</h1>
-    <p>探索三大主題，深入每一集的精彩內容！</p>
-  </header>
-  <main>
-    <section id="episodes">
-      <!-- 精選集數區塊由 JS 動態產生 -->
-    </section>
-  </main>
-  <footer>
-    <small>&copy; 2026 播客精選集</small>
-  </footer>
+<body class="dark">
+  <aside class="sidebar">
+    <div class="logo">🎧</div>
+    <nav>
+      <button title="首頁" class="nav-btn active">🏠</button>
+      <button title="收藏" class="nav-btn">💜</button>
+      <button title="書籤" class="nav-btn">🔖</button>
+    </nav>
+  </aside>
+  <div class="main-content">
+    <header class="topbar">
+      <div class="category-bar">
+        <button class="cat-btn active">Podcast</button>
+        <button class="cat-btn">音樂</button>
+        <button class="cat-btn">追蹤中</button>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="想播放什麼內容？" />
+        <button class="search-btn">🔍</button>
+      </div>
+    </header>
+    <main>
+      <section id="episodes">
+        <!-- 精選集數區塊由 JS 動態產生 -->
+      </section>
+    </main>
+    <footer>
+      <small>&copy; 2026 播客精選集</small>
+    </footer>
+  </div>
   <script src="../scripts/main.js"></script>
 </body>
 </html>
